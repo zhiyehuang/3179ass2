@@ -24,42 +24,39 @@
 
     <div class="pure-g">
         <div class="pure-u-1-1">
-            <div id="vis1"  class="vis-container" style="align-content: center"></div>
+            <div id="vis1"  class="vis-container"></div>
         </div>
-        <p>In this map, the color of red from light to dark shows the housing prices in various parts of Melbourne.</label>
-        <br><br><br>
+        <p>In this map, the color of red from light to dark shows the housing prices in various parts of Melbourne.</p>
     </div>
 
     <div class="pure-g">
         <div class="pure-u-1-1">
             <div id="vis2"  class="vis-container"></div>
         </div>
-        <label>According to this bar chart, we can see that Boroondara City Council is the highest housing price area in Melbourne with an average of $1642149.37077, and the lowest is Moorabool Shire Council ($486090.909091). In addition to Boroondara, there are two areas where the average house price is higher than 1.4 million. Stonnington and Bayside also have as high as AUD 1,574,150.94381 and AUD 1,467,352.49379.</label>
-        <br><br><br>
+        <p>According to this bar chart, we can see that Boroondara City Council is the highest housing price area in Melbourne with an average of $1642149.37077, and the lowest is Moorabool Shire Council ($486090.909091). In addition to Boroondara, there are two areas where the average house price is higher than 1.4 million. Stonnington and Bayside also have as high as AUD 1,574,150.94381 and AUD 1,467,352.49379.</p>
     </div>
 
     <div class="pure-g">
         <div class="pure-u-1-1">
             <div id="vis3"  class="vis-container"></div>
         </div>
-        <label>It can be seen from this pie chart,people are more inclined to buy a house by owning three rooms (83850), which accounts for 42.7% of the total. The next popular one is a house with four rooms with the data 62980.</label>
-        <br><br><br>
+        <p>It can be seen from this pie chart,people are more inclined to buy a house by owning three rooms (83850), which accounts for 42.7% of the total. The next popular one is a house with four rooms with the data 62980.</p>
     </div>
 
-</div> <!-- end page -->
+</div> 
 
 <script type="text/javascript">
-    var specVis1 = "js/room1.vg.json";
-    var specVis2 = "js/room2.vg.json";
-    var specVis3 = "js/room3.vg.json";
+    var vg_1 = "js/room1.vg.json";
+    var vg_2 = "js/room2.vg.json";
+    var vg_3 = "js/room3.vg.json";
 
-    vegaEmbed('#vis1', specVis1, {"actions": false}).then(function(result) {
+    vegaEmbed('#vis1', vg_1, {"actions": false}).then(function(result) {
     }).catch(console.error);
 
-    vegaEmbed('#vis2', specVis2, {"actions": false}).then(function(result) {
+    vegaEmbed('#vis2', vg_2, {"actions": false}).then(function(result) {
     }).catch(console.error);
 
-    vegaEmbed('#vis3', specVis3, {"actions": false}).then(function(result) {
+    vegaEmbed('#vis3', vg_3, {"actions": false}).then(function(result) {
     }).catch(console.error);
 
 </script>
