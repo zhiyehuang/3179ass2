@@ -1,0 +1,15 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Price in different councilarea" },
+    "data": {
+        "url": "https://raw.githubusercontent.com/zhiyehuang/3179ass2/main/MELBOURNE_HOUSE_PRICES_LESS.csv"
+    },
+    
+    "mark": {"type":"line", "tooltip": true},
+    "encoding": {
+        "x": { "field": "Regionname", "type": "nominal" },
+        "y": { "field": "Price", "type": "quantitative", "aggregate" : "mean"}
+    }
+
+
+}

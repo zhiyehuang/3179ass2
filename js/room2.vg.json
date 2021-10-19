@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Rooms in house" },
+    "data": {
+        "url": "https://raw.githubusercontent.com/zhiyehuang/3179ass2/main/MELBOURNE_HOUSE_PRICES_LESS.csv"
+    },
+    "mark": {"type":"arc", "tooltip": true},
+    "encoding": {
+        "color": { "field": "Rooms", 
+                    "type": "nominal",
+                    "scale": {
+                        "domain": [
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "1",
+                        "6"
+                        ],
+                        "range": [
+                        "#31a354",
+                        "#feb24c",
+                        "#43a2ca",
+                        "#de2d26",
+                        "#377eb8",
+                        "#636363"
+                        ]
+                        } },
+        "theta": { "field": "Rooms", "type": "quantitative", "aggregate" : "sum"}
+    }
+}
+

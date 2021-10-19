@@ -1,0 +1,35 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 1000,
+    "height": 800,
+    "title": "House price in melbourne",
+    "projection": {"type": "equalEarth"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/zhiyehuang/3179ass2/main/vic.json",
+          "format": {"type": "topojson", "feature": "features"}
+        },
+        "mark": {"type": "geoshape",  "stroke": "white","tooltip": {"content": "data"}},
+        "transform": [
+          {
+            "lookup": "properties.vic_loca_2",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/zhiyehuang/3179ass2/main/MELBOURNE_HOUSE_PRICES_LESS.csv"
+              },
+              "key": "SUBURB",
+              "fields": ["Price","SUBURB"]
+            }
+          }
+        ],
+        "encoding": {
+          "color": {
+            "field": "Price",
+            "type": "quantitative",
+            "scale": {"scheme": "reds"}
+          }
+        }
+      }
+    ]
+  }
