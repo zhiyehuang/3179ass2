@@ -7,7 +7,7 @@ body{
 }
 .page{
     width: 1200px;
-    background-color: #f3f0ef;
+    background-color: rgb(207, 230, 245);
     margin: auto;
     padding: 50px;
     padding-top: 35px;
@@ -29,4 +29,9 @@ body{
 }
 .small-font{
     font-size: 14px;
+}
+#c-align {
+    text-align: center;
+    border: 1px solid black;
+    /* to set the border*/
 }
